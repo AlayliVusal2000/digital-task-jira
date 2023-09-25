@@ -9,8 +9,8 @@ public interface ImageService {
 
     ImageEntity uploadImage(MultipartFile file) throws IOException;
 
-    byte[] downloadImage(Long id);
+    byte[] downloadImage();
 
-    void deleteImage(Long id);
+    void deleteImage();
 
 }

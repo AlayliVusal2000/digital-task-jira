@@ -19,25 +19,24 @@ public class ImageController {
     private final ImageService imageService;
 
 
-    @PostMapping("/upload")
+    @PostMapping("/uploadProfilePhoto")
     public ResponseEntity<String> uploadImage(@RequestParam("image") MultipartFile file) throws IOException {
         imageService.uploadImage(file);
         return ResponseEntity.ok("Image successfully upload.");
 
     }
 
-    @GetMapping("/download/{id}")
-    public ResponseEntity<byte[]> downloadImage(@PathVariable Long id) {
-        byte[] imageData = imageService.downloadImage(id);
+    @GetMapping("/downloadProfilePhoto")
+    public ResponseEntity<byte[]> downloadImage() {
+        byte[] imageData = imageService.downloadImage();
         return ResponseEntity.status(HttpStatus.OK)
                 .contentType(MediaType.valueOf("image/png"))
                 .body(imageData);
-
     }
 
-    @DeleteMapping("/delete/{id}")
-    public void deleteImage(@PathVariable Long id){
-        imageService.deleteImage(id);
+    @DeleteMapping("/deleteProfilePhoto")
+    public void deleteImage() {
+        imageService.deleteImage();
 
     }
 

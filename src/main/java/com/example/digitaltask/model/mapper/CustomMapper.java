@@ -1,12 +1,13 @@
 package com.example.digitaltask.model.mapper;
 
+import com.example.digitaltask.dao.entity.ItemEntity;
 import com.example.digitaltask.dao.entity.UserEntity;
 import com.example.digitaltask.model.dto.AdminDto;
+import com.example.digitaltask.model.dto.ItemDto;
 import com.example.digitaltask.model.dto.UserDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-import java.util.List;
 
 @Mapper
 public interface CustomMapper {
@@ -16,6 +17,7 @@ public interface CustomMapper {
 
     AdminDto buildEntityToAdminDto(UserEntity userEntity);
     UserDto buildEntityToUserDto(UserEntity userEntity);
+
 
 
 

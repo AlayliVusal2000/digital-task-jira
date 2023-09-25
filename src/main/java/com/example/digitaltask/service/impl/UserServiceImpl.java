@@ -5,7 +5,6 @@ import com.example.digitaltask.dao.repo.UserRepository;
 import com.example.digitaltask.exception.IncorrectPasswordException;
 import com.example.digitaltask.exception.OldAndNewPasswordNotSameException;
 import com.example.digitaltask.exception.PasswordNotMatchesException;
-import com.example.digitaltask.model.dto.AdminDto;
 import com.example.digitaltask.model.dto.UpdatePasswordDto;
 import com.example.digitaltask.model.dto.UserDto;
 import com.example.digitaltask.service.UserService;
@@ -16,8 +15,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import static com.example.digitaltask.model.mapper.CustomMapper.INSTANCE;
 
+import static com.example.digitaltask.model.mapper.CustomMapper.INSTANCE;
 
 
 @Service
