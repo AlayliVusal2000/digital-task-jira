@@ -22,5 +22,4 @@ public class ItemEntity {
     @JsonIgnore
     private UserEntity items;
 
-
 }

@@ -12,7 +12,6 @@ import static com.example.digitaltask.model.mapper.CustomMapper.INSTANCE;
 @RequestMapping("/item")
 public class ItemController {
     private final ItemService itemService;
-
     @PostMapping("/create/{id}")
     public ItemEntity create(@PathVariable Long id,@RequestBody ItemEntity item) {
        return itemService.create(item,id);
