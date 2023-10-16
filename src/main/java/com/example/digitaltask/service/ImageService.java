@@ -12,5 +12,4 @@ public interface ImageService {
     byte[] downloadImage();
 
     void deleteImage();
-
 }
